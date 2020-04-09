@@ -1,0 +1,9 @@
+/node_modules
+/.vscode/
+/src/
+.prettierrc
+package.json
+postcss.config.js
+tsconfig.json
+webpack.config.js
+yarn.lock

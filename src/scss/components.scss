@@ -1,0 +1,127 @@
+// BUTTON
+@mixin wks-btn {
+  width: 100px;
+  height: 40px;
+  font-size: map-get($font-sizes, "xxs");
+  color: #fff;
+  border-radius: 4px;
+  background-color: $primary;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  font-weight: normal;
+
+  &:hover {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: normal;
+  }
+}
+
+// CARD
+@mixin wks-card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  margin: map-get($space, "s");
+}
+
+@mixin wks-card-anchor {
+  margin: 0;
+}
+
+@mixin wks-card-figure {
+  position: relative;
+  overflow: hidden;
+  padding-top: 50%;
+  width: 100%;
+  height: auto;
+  border-radius: 4px 4px 0 0;
+  margin: 0;
+}
+
+@mixin wks-card-image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin wks-card-title {
+  font-size: map-get($font-sizes, "m");
+  font-weight: map-get($font-weights, "l");
+  padding: 0 map-get($space, "s");
+  color: $grey500;
+}
+
+@mixin wks-card-excerpt {
+  p {
+    margin: 0;
+    font-size: map-get($font-sizes, "xxs");
+    font-style: italic;
+    color: $grey300;
+    margin: map-get($space, "s") 0;
+    padding: 0 map-get($space, "s");
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+  }
+}
+
+@mixin wks-card-date {
+  padding: map-get($space, "s") map-get($space, "s") map-get($space, "xxxs") map-get($space, "s");
+  font-size: map-get($font-sizes, "xxxs");
+  display: flex;
+  align-items: center;
+
+  span,
+  a {
+    color: $grey300;
+    margin: 0;
+  }
+
+  svg {
+    width: 12px;
+    fill: $grey300;
+    margin-right: map-get($space, "xs");
+  }
+}
+
+// LISITNG
+@mixin wks-listing {
+  display: flex;
+  flex-wrap: wrap;
+  margin: map-get($space, "s") 0;
+}
+
+//PAGINATION
+@mixin wks-pagination {
+  display: flex;
+  color: $grey500;
+
+  .current {
+    color: #fff;
+    background-color: $primary;
+  }
+
+  a,
+  span {
+    color: $grey500;
+    margin: 0 map-get($space, "xs");
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

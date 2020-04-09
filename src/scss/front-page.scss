@@ -1,0 +1,282 @@
+.front-page-slider-item {
+  position: relative;
+  width: 100%;
+}
+
+.front-page-slider-figure {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.front-page-slider-figure--desktop {
+  padding-top: 50%;
+}
+
+.front-page-slider-figure--mobile {
+  padding-top: 66.6%;
+}
+
+.front-page-slider-image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.front-page-slider-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8) -30%, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8) 130%);
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+}
+
+.front-page-slider-next-prev {
+  width: 35px;
+  height: 35px;
+}
+
+.front-page-slide-title {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  color: #fff;
+  font-weight: map-get($font-weights, "xl");
+  z-index: 111;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0 map-get($space, "m");
+  max-width: 90%;
+}
+
+.front-page-slide-title--desktop {
+  font-size: map-get($font-sizes, "xxxxl");
+}
+
+.front-page-slide-title--mobile {
+  font-size: map-get($font-sizes, "l");
+}
+
+.front-page-baner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.front-page-baner--desktop {
+  padding-top: 25%;
+}
+
+.front-page-baner--mobile {
+  padding-top: 50%;
+}
+
+.front-page-baner-overlay {
+  width: 100%;
+  height: 100%;
+  padding-top: 25%;
+  background: linear-gradient($primary600, black);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  z-index: 10;
+}
+
+.front-page-baner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: map-get($font-weights, "l");
+  transition: all 0.3s ease-in-out;
+  z-index: 20;
+}
+
+.front-page-baner-text--desktop {
+  font-size: map-get($font-sizes, "xxxl");
+}
+
+.front-page-baner-text--desktop {
+  font-size: map-get($font-sizes, "xxl");
+}
+
+.front-page-banner-image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.front-page-icons {
+  width: 100%;
+  padding: map-get($space, "m");
+  margin: map-get($space, "xxxl") 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.front-page-icons--mobile {
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0;
+}
+
+.front-page-icons-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: $grey300;
+  font-weight: map-get($font-weights, "xl");
+  transition: all 0.5s ease-in-out;
+
+  & > :first-child {
+    margin-bottom: map-get($space, "l");
+  }
+
+  svg {
+    opacity: 0.9;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.5));
+    transition: all 0.5s ease-in-out;
+    fill: $primary600;
+    max-width: 100%;
+  }
+
+  &:hover {
+    text-decoration: none;
+    font-weight: map-get($font-weights, "xl");
+
+    svg {
+      opacity: 1;
+      filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.5));
+      font-weight: map-get($font-weights, "xl");
+      transform: scale(1.05);
+    }
+  }
+}
+
+.front-page-icons-item--desktop {
+  font-size: map-get($font-sizes, "xxxl");
+
+  svg {
+    height: 250px;
+    fill: $primary600;
+  }
+
+  &:hover {
+    font-size: map-get($font-sizes, "xxxl");
+  }
+}
+
+.front-page-icons-item--mobile {
+  font-size: map-get($font-sizes, "xxl");
+  margin: map-get($space, "xl") 0;
+
+  svg {
+    height: 150px;
+  }
+
+  &:hover {
+    font-size: map-get($font-sizes, "xxl");
+  }
+}
+
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 50px;
+  opacity: 0.5;
+  &:before {
+    content: "";
+    background: linear-gradient(to right, transparent, $grey500, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 3px;
+  }
+  &:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    padding: 0 0.5em;
+    line-height: 50px;
+    color: $grey500;
+    background-color: #fff;
+  }
+}
+
+.hr-text--desktop {
+  margin: map-get($space, "xxxl");
+  &:after {
+    font-size: map-get($font-sizes, "xxxxl");
+  }
+}
+
+.hr-text--mobile {
+  margin: 0;
+  margin-bottom: map-get($space, "l");
+  &:after {
+    font-size: map-get($font-sizes, "xl");
+  }
+}
+
+// OVERWRITEE BOOTSTRAP
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 1000;
+}
+
+.carousel-indicators {
+  z-index: 100;
+  bottom: 5%;
+
+  li {
+    width: 40px;
+    height: 5px;
+  }
+}
+
+@media (max-width: map-get($breakpoints, "mobile" )) {
+  .carousel-indicators {
+    z-index: 100;
+    bottom: 0;
+
+    li {
+      width: 30px;
+      height: 3px;
+    }
+  }
+
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    width: 20px;
+    height: 20px;
+  }
+}

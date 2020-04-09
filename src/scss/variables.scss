@@ -1,0 +1,72 @@
+// COLORS
+$primary: #579e64;
+$primary600: #36633e;
+$secondary: #d73131;
+$gold: #e5bb68;
+$silver: #959493;
+$bronze: #835c33;
+$grey200: #f0f0f0;
+$grey300: #7f7f7f;
+$grey400: #333;
+$grey500: #373839;
+
+// SPACE
+$space: (
+  "none": 0px,
+  "xxxs": 2px,
+  "xxs": 4px,
+  "xs": 8px,
+  "s": 16px,
+  "m": 24px,
+  "l": 32px,
+  "xl": 48px,
+  "xxl": 64px,
+  "xxxl": 96px
+);
+
+// RADIUS
+$radii: (
+  "none": 0px,
+  "s": 4px
+);
+
+// FONT_WEIGHTS
+$font-weights: (
+  "s": 300,
+  "m": 400,
+  "l": 500,
+  "xl": 700
+);
+
+// FONT SIZES
+$font-sizes: (
+  "xxxs": 12px,
+  "xxs": 14px,
+  "xs": 16px,
+  "s": 18px,
+  "m": 20px,
+  "l": 22px,
+  "xl": 24px,
+  "xxl": 28px,
+  "xxxl": 38px,
+  "xxxxl": 48px
+);
+
+// LINE HEIGHTS
+$line-heights: (
+  "xxxs": 16px,
+  "xxs": 18px,
+  "xs": 20px,
+  "s": 22px,
+  "m": 24px,
+  "l": 28px,
+  "xl": 32px,
+  "xxl": 36px
+);
+
+//BREAKPOINTS
+$breakpoints: (
+  "mobile": 480px,
+  "narrow": 960px,
+  "wide": 1280px
+);

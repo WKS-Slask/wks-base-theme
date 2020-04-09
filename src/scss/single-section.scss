@@ -1,0 +1,101 @@
+.single-section-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  figure {
+    margin: 0;
+  }
+}
+
+.single-section-title {
+  font-size: map-get($font-sizes, "xxxxl");
+  font-weight: map-get($font-weights, "xl");
+  align-self: flex-start;
+  margin: 0;
+}
+
+.single-section-title-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.single-section-social-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.single-section-social {
+  svg {
+    width: 45px;
+    height: 45px;
+    fill: $grey500;
+  }
+}
+
+.single-section-social--desktop {
+  width: 45px;
+  height: 45px;
+  margin-left: map-get($space, "m");
+
+  svg {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.single-section-social--mobile {
+  width: 35px;
+  height: 35px;
+  margin-right: map-get($space, "m");
+
+  svg {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.single-section-subtitle {
+  align-self: flex-start;
+}
+
+.single-section-listing {
+  @include wks-listing;
+}
+
+.single-section-card-anchor {
+  @include wks-card-anchor;
+}
+
+.single-section-card-wrapper {
+  @include wks-card;
+  padding-bottom: map-get($space, "l");
+}
+
+.single-section-card-figure {
+  @include wks-card-figure;
+}
+
+.single-section-card-image {
+  @include wks-card-image;
+}
+
+.single-section-card-title {
+  @include wks-card-title;
+}
+
+.single-section-card-date {
+  @include wks-card-date;
+}
+
+.single-section-pagination {
+  @include wks-pagination;
+}
+
+@media (max-width: map-get($breakpoints, "mobile" )) {
+  .single-section-card-wrapper {
+    width: 100%;
+  }
+}

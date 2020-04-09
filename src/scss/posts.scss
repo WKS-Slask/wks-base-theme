@@ -1,0 +1,41 @@
+.posts-listing {
+  @include wks-listing;
+}
+
+.posts-card-anchor {
+  @include wks-card-anchor;
+}
+
+.posts-card-wrapper {
+  @include wks-card;
+}
+
+.posts-card-figure {
+  @include wks-card-figure;
+}
+
+.posts-card-image {
+  @include wks-card-image;
+}
+
+.posts-card-title {
+  @include wks-card-title;
+}
+
+.posts-card-excerpt {
+  @include wks-card-excerpt;
+}
+
+.posts-card-date {
+  @include wks-card-date;
+}
+
+.posts-pagination {
+  @include wks-pagination;
+}
+
+@media (max-width: map-get($breakpoints, "mobile" )) {
+  .posts-card-wrapper {
+    width: 100%;
+  }
+}

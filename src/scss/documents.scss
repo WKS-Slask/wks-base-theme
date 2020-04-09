@@ -1,0 +1,95 @@
+.documents {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.documents--desktop {
+  padding: map-get($space, "l");
+}
+
+.documents--mobile {
+  padding: 0;
+}
+
+.documents-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: map-get($space, "s");
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.16), 2px 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.documents-card--desktop {
+  width: 300px;
+}
+
+.documents-card--mobile {
+  width: 100%;
+}
+
+.documents-card-title {
+  width: 100%;
+  padding: map-get($space, "m") 0;
+
+  font-weight: map-get($font-weights, "l");
+  text-align: center;
+  color: #fff;
+  background-color: $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px 4px 0 0;
+}
+
+.documents-card-title--desktop {
+  font-size: map-get($font-sizes, "xl");
+}
+
+.documents-card-title--mobile {
+  font-size: map-get($font-sizes, "m");
+}
+
+.documents-card-description {
+  width: 100%;
+  font-weight: map-get($font-weights, "l");
+  font-style: italic;
+  color: $grey300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: map-get($space, "m") map-get($space, "xs");
+}
+
+.documents-card-description--desktop {
+  font-size: map-get($font-sizes, "xs");
+}
+
+.documents-card-description--mobile {
+  font-size: map-get($font-sizes, "xxs");
+}
+
+.documents-card-border {
+  border: 2px solid $grey200;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: map-get($space, "m");
+}
+
+.documents-card-border--desktop {
+  width: 300px;
+}
+
+.documents-card-border--mobile {
+  width: 100%;
+}
+
+.documents-card-button {
+  @include wks-btn;
+}

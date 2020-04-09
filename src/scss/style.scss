@@ -1,0 +1,109 @@
+@import "variables";
+@import "components";
+@import "navbar";
+@import "footer";
+@import "page";
+@import "posts";
+@import "single";
+@import "archive";
+@import "front-page";
+@import "single-section";
+@import "contact";
+@import "documents";
+@import "gallery";
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  color: $grey500;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+a {
+  color: $grey500;
+  font-weight: map-get($font-weights, "l");
+  text-decoration: none;
+  &:hover {
+    color: $grey500;
+    font-weight: map-get($font-weights, "l");
+    text-decoration: underline;
+  }
+}
+
+p {
+  font-size: map-get($font-sizes, "s");
+  text-align: justify;
+  margin: map-get($space, "s") 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  font-size: map-get($font-sizes, "xxxl");
+  font-weight: map-get($font-weights, "xl");
+  margin: map-get($space, "l") 0;
+}
+
+h3 {
+  font-size: map-get($font-sizes, "xl");
+}
+
+h5 {
+  font-size: map-get($font-sizes, "xs");
+}
+
+blockquote {
+  display: flex;
+  font-style: italic;
+
+  cite {
+    align-self: flex-end;
+    color: $grey300;
+    margin-top: map-get($space, "m");
+  }
+
+  &::before {
+    content: "";
+    border-left: 4px solid $primary;
+    padding: map-get($space, "xs");
+  }
+}
+
+@media (max-width: map-get($breakpoints, "mobile" )) {
+  p {
+    font-size: map-get($font-sizes, "xs");
+  }
+
+  h1 {
+    font-size: map-get($font-sizes, "xxl");
+  }
+
+  h2 {
+    font-size: map-get($font-sizes, "l");
+  }
+
+  h3 {
+    font-size: map-get($font-sizes, "m");
+  }
+
+  h4 {
+    font-size: map-get($font-sizes, "s");
+  }
+}
